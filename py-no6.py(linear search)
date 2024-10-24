@@ -1,0 +1,13 @@
+def linear(target, tup):
+    for index in range(len(tup)):
+        if tup[index] == target:
+            return index  # Return the index if found
+    return "not found"  # Return "not found" if the loop completes without finding the target
+
+# Tuple and target input
+tu = (1, 2, 3, 4, 5, 6, 7)
+target = int(input("Enter element to search: "))  # Get target from user
+
+# Print result
+
+print("Element found at index:", linear(target, tu))
