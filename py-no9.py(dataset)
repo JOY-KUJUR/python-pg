@@ -1,0 +1,40 @@
+import pandas as pd
+
+data={
+    'name':['joy','tushar','akash','keval','suarav','sree'],
+    'age':[21,22,25,22,22,22]
+}
+
+d=pd.DataFrame(data)
+
+print(d)
+
+#1.using mean func
+
+print("avreage =",d['age'].mean())
+
+#2.using suma and len()
+
+s=sum(d['age'])
+l=len(d['age'])
+avg=s/l
+
+print(avg)
+
+#finding mean 
+
+if l%2==1:
+    m=l//2
+else:
+    m=(l+1)//2
+print("median",m)
+#by using loc func we acces the  row
+print(d.loc[m])
+
+#finding in max and min
+#1.using predefine func
+
+
+print("max =",d.loc[d['age'].idxmax()])
+
+print("min =" ,d.loc[d['age'].idxmin()])
