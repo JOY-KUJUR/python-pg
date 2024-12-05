@@ -1,0 +1,11 @@
+class Pet:
+    def __init__(self, name, pet_type, price):
+        self.name = name
+        self.pet_type = pet_type
+        self.price = price
+
+pet1 = Pet("Buddy", "Dog", 1000)
+pet2 = Pet("Whiskers", "Cat", 500)
+
+print(f"Pet 1: Name - {pet1.name}, Type - {pet1.pet_type}, Price - ${pet1.price}")
+print(f"Pet 2: Name - {pet2.name}, Type - {pet2.pet_type}, Price - ${pet2.price}")
