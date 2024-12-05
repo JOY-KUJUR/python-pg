@@ -1,0 +1,22 @@
+import string
+
+
+reviews = "this book is okay"
+
+
+reviews_cleaned = reviews.translate(str.maketrans('', '', string.punctuation)).lower()
+
+
+words = reviews_cleaned.split()
+
+if 'not' in words:
+    if 'bad' in words or 'horrible' in words:
+        print("positive Review")
+    elif 'good' in words or 'great' in words:
+        print("negative Review")
+elif 'bad' in words or 'horrible' in words:
+    print("Negative Review")
+elif 'good' in words or 'great' in words:
+    print("Positive Review")
+else:
+    print("Neutral Review")
