@@ -1,0 +1,31 @@
+# Parent class
+class Person:
+    def __init__(self, age, gender):
+        self.age = age
+        self.gender = gender
+
+# Derived class Teacher
+class Teacher(Person):
+    def __init__(self, age, gender, subject):
+        super().__init__(age, gender)
+        self.subject = subject
+        
+    def teaches(self):
+        print("I am a teacher")
+
+# Derived class Student
+class Student(Person):
+    def __init__(self, age, gender, grade):
+        super().__init__(age, gender)
+        self.grade = grade
+        
+    def studies(self):
+        print("I study")
+
+# Creating objects of Teacher and Student
+teacher = Teacher(40, "Male", "Math")
+student = Student(18, "Female", "A")
+
+# Calling methods
+teacher.teaches()
+student.studies()
